@@ -11,7 +11,7 @@ namespace PycWebApi
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)     // todo add logging
+            Host.CreateDefaultBuilder(args)     
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
