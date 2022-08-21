@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using PycApi.Middleware;
 using TechaApiHibernate.StartUpExtension;
 
 namespace PycApi
@@ -41,6 +42,11 @@ namespace PycApi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PycApi v1"));
             }
+
+
+            // middleware
+            app.UseMiddleware<HeartbeatMiddleware>();
+            app.UseMiddleware<ErrorHandlerMiddleware>();
 
             app.UseHttpsRedirection();
 
