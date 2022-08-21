@@ -36,6 +36,12 @@ namespace PycWebApi.Controllers
             list.Add(new GeoLocation { Id = 3, Lat = rng.Next(900, 1400), Long = rng.Next(1500, 3400) });
         }
 
+        [HttpGet]
+        public List<GeoLocation> Get()
+        {
+            return list;
+        }
+
 
         [HttpGet("GetByIdQuery")]
         public GeoLocation GetByIdQuery([FromQuery]int id)
