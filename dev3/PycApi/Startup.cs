@@ -4,10 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using NHibernate.Cfg;
-using NHibernate.Cfg.MappingSchema;
-using NHibernate.Dialect;
-using NHibernate.Mapping.ByCode;
+using TechaApiHibernate.StartUpExtension;
 
 namespace PycApi
 {
@@ -24,27 +21,9 @@ namespace PycApi
         {
             // hibernate
             var connStr = Configuration.GetConnectionString("PostgreSqlConnection");
+            services.AddNHibernatePosgreSql(connStr);
 
-            var mapper = new ModelMapper();
-            mapper.AddMappings(typeof(NhbExtensions).Assembly.ExportedTypes);
-            HbmMapping domainMapping = mapper.CompileMappingForAllExplicitlyAddedEntities();
 
-            var configuration = new Configuration();
-            configuration.DataBaseIntegration(c =>
-            {
-                c.Dialect<PostgreSQLDialect>();
-                c.ConnectionString = connStr;
-                c.KeywordsAutoImport = Hbm2DDLKeyWords.AutoQuote;
-                c.SchemaAction = SchemaAutoAction.Validate;
-                c.LogFormattedSql = true;
-                c.LogSqlInConsole = true;
-            });
-            configuration.AddMapping(domainMapping);
-
-            var sessionFactory = configuration.BuildSessionFactory();
-
-            services.AddSingleton(sessionFactory);
-            services.AddScoped(factory => sessionFactory.OpenSession());
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

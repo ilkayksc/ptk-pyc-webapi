@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PycApi", "PycApi\PycApi.csproj", "{24606C04-7907-4408-B7C9-6E7CB02AA4BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PycApi", "PycApi\PycApi.csproj", "{24606C04-7907-4408-B7C9-6E7CB02AA4BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,22 +15,6 @@ Global
 		{24606C04-7907-4408-B7C9-6E7CB02AA4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24606C04-7907-4408-B7C9-6E7CB02AA4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24606C04-7907-4408-B7C9-6E7CB02AA4BD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71CF7290-726F-46F9-9EE8-E02BB2AEC4BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71CF7290-726F-46F9-9EE8-E02BB2AEC4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71CF7290-726F-46F9-9EE8-E02BB2AEC4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71CF7290-726F-46F9-9EE8-E02BB2AEC4BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3AA2CEFB-96A7-4308-B552-E820F6AE9F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3AA2CEFB-96A7-4308-B552-E820F6AE9F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3AA2CEFB-96A7-4308-B552-E820F6AE9F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3AA2CEFB-96A7-4308-B552-E820F6AE9F9C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61ECD50D-81D0-4CD6-9892-60F2F1D7CAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61ECD50D-81D0-4CD6-9892-60F2F1D7CAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61ECD50D-81D0-4CD6-9892-60F2F1D7CAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61ECD50D-81D0-4CD6-9892-60F2F1D7CAAF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{916B5BC0-B157-4D65-A2BD-D5B549FE671D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{916B5BC0-B157-4D65-A2BD-D5B549FE671D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{916B5BC0-B157-4D65-A2BD-D5B549FE671D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{916B5BC0-B157-4D65-A2BD-D5B549FE671D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
