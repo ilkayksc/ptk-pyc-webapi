@@ -8,11 +8,11 @@ namespace PycApi.Mapper
     {
         public MappingProfile()
         {
-            CreateMap<Author, AuthorDto>();
-            CreateMap<AuthorDto, Author>();
-
+            CreateMap<AuthorDto, Author>().ReverseMap();
 
             CreateMap<StoreDto, Store>().ReverseMap();
+
+            CreateMap<AccountDto, Account>().ReverseMap();
         }
 
     }

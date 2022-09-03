@@ -7,7 +7,7 @@ using PycApi.Data;
 
 namespace PycApi.StartUpExtension
 {
-    public static class NHibernateExtensions
+    public static class ExtensionNHibernate
     {
         /// <summary>
         /// 

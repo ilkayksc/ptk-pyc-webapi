@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using PycApi.Base;
 using PycApi.Middleware;
 using PycApi.StartUpExtension;
 
@@ -17,6 +18,8 @@ namespace PycApi
         }
 
         public IConfiguration Configuration { get; }
+        public static JwtConfig JwtConfig { get; private set; }
+
 
         public void ConfigureServices(IServiceCollection services)
         {
@@ -24,16 +27,19 @@ namespace PycApi
             var connStr = Configuration.GetConnectionString("PostgreSqlConnection");
             services.AddNHibernatePosgreSql(connStr);
 
+            // Configure JWT Bearer
+            JwtConfig = Configuration.GetSection("JwtConfig").Get<JwtConfig>();
+            services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
+
+
             // service
             services.AddServices();
-
+            services.AddJwtBearerAuthentication();
+            services.AddCustomizeSwagger();
 
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "PycApi", Version = "v1" });
-            });
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,7 +49,7 @@ namespace PycApi
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PycApi v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PycApi Tech Company"));
             }
 
 
@@ -53,8 +59,10 @@ namespace PycApi
 
             app.UseHttpsRedirection();
 
-            app.UseRouting();
 
+            // add auth 
+            app.UseAuthentication();
+            app.UseRouting();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
