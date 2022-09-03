@@ -4,9 +4,9 @@ using NHibernate.Mapping.ByCode.Conformist;
 
 namespace PycApi.Data
 {
-    public class AuthorMap : ClassMapping<Author>
+    public class StoreMap : ClassMapping<Store>
     {
-        public AuthorMap()
+        public StoreMap()
         {
             Id(x => x.Id, x =>
             {
@@ -15,23 +15,28 @@ namespace PycApi.Data
                 x.UnsavedValue(0);
                 x.Generator(Generators.Increment);
             });
-           
-            Property(b => b.FirstName, x =>
+
+            Property(b => b.Name, x =>
             {
                 x.Length(50);
                 x.Type(NHibernateUtil.String);
                 x.NotNullable(true);
             });
 
-            Property(b => b.LastName, x =>
+            Property(b => b.Address, x =>
             {
-                x.Length(50);
+                x.Length(150);
                 x.Type(NHibernateUtil.String);
                 x.NotNullable(true);
+            }); 
+            
+            Property(b => b.Inventory, x =>
+            {
+                x.Type(NHibernateUtil.Int32);
+                x.NotNullable(true);
             });
-           
 
-            Table("author");
+            Table("store");
         }
     }
 }

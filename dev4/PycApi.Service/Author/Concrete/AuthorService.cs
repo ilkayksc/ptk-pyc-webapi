@@ -3,6 +3,7 @@ using NHibernate;
 using PycApi.Base;
 using PycApi.Data;
 using PycApi.Dto;
+using System;
 using System.Collections.Generic;
 
 namespace PycApi.Service
@@ -30,6 +31,13 @@ namespace PycApi.Service
         {
              return base.GetById(id);
         }
+
+        public override BaseResponse<AuthorDto> Insert(AuthorDto insertResource)
+        {
+            return base.Insert(insertResource);
+        }
+
+
 
     }
 }

@@ -11,7 +11,7 @@ namespace PycApi.StartUpExtension
         {
             // services 
             services.AddScoped<IAuthorService,AuthorService>();
-
+            services.AddScoped<IStoreService, StoreService>();
 
             // mapper
             var mapperConfig = new MapperConfiguration(cfg =>

@@ -42,7 +42,7 @@ namespace PycApi.Service
         {
             try
             {
-                var tempEntity = mapper.Map<Dto, Entity>(insertResource);
+                var tempEntity = mapper.Map<Dto, Entity>(insertResource);              
 
                 hibernateRepository.BeginTransaction();
                 hibernateRepository.Save(tempEntity);

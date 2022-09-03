@@ -10,6 +10,9 @@ namespace PycApi.Mapper
         {
             CreateMap<Author, AuthorDto>();
             CreateMap<AuthorDto, Author>();
+
+
+            CreateMap<StoreDto, Store>().ReverseMap();
         }
 
     }
