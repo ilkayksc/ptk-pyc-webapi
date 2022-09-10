@@ -5,13 +5,15 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PycApi", "PycApi\PycApi.csproj", "{24606C04-7907-4408-B7C9-6E7CB02AA4BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PycApi.Base", "PycApi.Base\PycApi.Base.csproj", "{8EB91278-07B0-4196-A9E6-49D2769ECBFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PycApi.Base", "PycApi.Base\PycApi.Base.csproj", "{8EB91278-07B0-4196-A9E6-49D2769ECBFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PycApi.Data", "PycApi.Data\PycApi.Data.csproj", "{43283D6D-FAB8-47A8-971F-CA2E68300C79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PycApi.Data", "PycApi.Data\PycApi.Data.csproj", "{43283D6D-FAB8-47A8-971F-CA2E68300C79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PycApi.Dto", "PycApi.Dto\PycApi.Dto.csproj", "{2930709F-BB05-49A9-A843-4B3B957BB383}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PycApi.Dto", "PycApi.Dto\PycApi.Dto.csproj", "{2930709F-BB05-49A9-A843-4B3B957BB383}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PycApi.Service", "PycApi.Service\PycApi.Service.csproj", "{56E2AFC3-D368-4CEB-A564-B5BDC3BD834C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PycApi.Service", "PycApi.Service\PycApi.Service.csproj", "{56E2AFC3-D368-4CEB-A564-B5BDC3BD834C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PycApi.WorkerService", "PycApi.WorkerService\PycApi.WorkerService.csproj", "{6E2526D8-5CB7-4D3A-A297-6DF99937BD3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{56E2AFC3-D368-4CEB-A564-B5BDC3BD834C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56E2AFC3-D368-4CEB-A564-B5BDC3BD834C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56E2AFC3-D368-4CEB-A564-B5BDC3BD834C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E2526D8-5CB7-4D3A-A297-6DF99937BD3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E2526D8-5CB7-4D3A-A297-6DF99937BD3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E2526D8-5CB7-4D3A-A297-6DF99937BD3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E2526D8-5CB7-4D3A-A297-6DF99937BD3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

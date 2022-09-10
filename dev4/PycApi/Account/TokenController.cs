@@ -18,7 +18,7 @@ namespace PycApi
 
 
         [HttpPost("Login")]
-        public BaseResponse<TokenResponse> Increment([FromBody] TokenRequest request)
+        public BaseResponse<TokenResponse> Login([FromBody] TokenRequest request)
         {
             var response = tokenService.GenerateToken(request);
             return response;

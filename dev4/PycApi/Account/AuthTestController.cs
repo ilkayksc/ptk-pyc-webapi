@@ -4,6 +4,7 @@ using PycApi.Base;
 
 namespace PycApi
 {
+
     [ApiController]
     [Route("api/nhb/[controller]")]
     public class AuthTestController : ControllerBase

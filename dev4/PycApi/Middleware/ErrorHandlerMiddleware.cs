@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Serilog;
 using System;
 using System.Net;
 using System.Text.Json;
@@ -35,6 +36,7 @@ namespace PycApi.Middleware
 
                 // file logging 
 
+                Log.Error("ErrorHandlerMiddleware", error.Message);
                 var result = JsonSerializer.Serialize(messageError);
                 await response.WriteAsync(result);
             }

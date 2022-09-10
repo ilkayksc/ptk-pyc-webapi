@@ -2,6 +2,7 @@
 using NHibernate;
 using PycApi.Base;
 using PycApi.Data;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,16 +27,32 @@ namespace PycApi.Service
 
         public virtual BaseResponse<IEnumerable<Dto>> GetAll()
         {
-            var tempEntity = hibernateRepository.Entities.ToList();
-            var result = mapper.Map<IEnumerable<Entity>, IEnumerable<Dto>>(tempEntity);
-            return new BaseResponse<IEnumerable<Dto>>(result);
+            try
+            {
+                var tempEntity = hibernateRepository.Entities.ToList();
+                var result = mapper.Map<IEnumerable<Entity>, IEnumerable<Dto>>(tempEntity);
+                return new BaseResponse<IEnumerable<Dto>>(result);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("BaseService.GetAll", ex);
+                return new BaseResponse<IEnumerable<Dto>>(ex.Message);
+            }
         }
 
         public virtual BaseResponse<Dto> GetById(int id)
         {
-            var tempEntity = hibernateRepository.GetById(id);
-            var result = mapper.Map<Entity, Dto>(tempEntity);
-            return new BaseResponse<Dto>(result);
+            try
+            {
+                var tempEntity = hibernateRepository.GetById(id);
+                var result = mapper.Map<Entity, Dto>(tempEntity);
+                return new BaseResponse<Dto>(result);
+            }
+            catch (Exception ex)
+            {
+                Log.Error("BaseService.GetById", ex);
+                return new BaseResponse<Dto>(ex.Message);
+            }
         }
 
         public virtual BaseResponse<Dto> Insert(Dto insertResource)
@@ -53,6 +70,7 @@ namespace PycApi.Service
             }
             catch (Exception ex)
             {
+                Log.Error("BaseService.Insert", ex);
                 hibernateRepository.Rollback();
                 hibernateRepository.CloseTransaction();
                 return new BaseResponse<Dto>(ex.Message);
@@ -79,6 +97,7 @@ namespace PycApi.Service
             }
             catch (Exception ex)
             {
+                Log.Error("BaseService.Remove", ex);
                 hibernateRepository.Rollback();
                 hibernateRepository.CloseTransaction();
                 return new BaseResponse<Dto>(ex.Message);
@@ -108,6 +127,7 @@ namespace PycApi.Service
             }
             catch (Exception ex)
             {
+                Log.Error("BaseService.Update", ex);
                 hibernateRepository.Rollback();
                 hibernateRepository.CloseTransaction();
                 return new BaseResponse<Dto>(ex.Message);
