@@ -1,0 +1,6 @@
+{"Timestamp":"2022-09-18T09:38:03.1913156+00:00","Level":"Information","MessageTemplate":"Application is starting.","Properties":{"MachineName":"9367e115fb02","ProcessId":39,"ThreadId":1,"ApplicationName":"Pyc"}}
+{"Timestamp":"2022-09-18T09:39:44.1991393+00:00","Level":"Information","MessageTemplate":"Application is starting.","Properties":{"MachineName":"537baaf0ecfa","ProcessId":27,"ThreadId":1,"ApplicationName":"Pyc"}}
+{"Timestamp":"2022-09-18T09:40:42.5092945+00:00","Level":"Information","MessageTemplate":"Application is starting.","Properties":{"MachineName":"537baaf0ecfa","ProcessId":87,"ThreadId":1,"ApplicationName":"Pyc"}}
+{"Timestamp":"2022-09-18T09:42:26.9262753+00:00","Level":"Information","MessageTemplate":"Application is starting.","Properties":{"MachineName":"537baaf0ecfa","ProcessId":138,"ThreadId":1,"ApplicationName":"Pyc"}}
+{"Timestamp":"2022-09-18T09:44:53.3190781+00:00","Level":"Information","MessageTemplate":"Application is starting.","Properties":{"MachineName":"537baaf0ecfa","ProcessId":189,"ThreadId":1,"ApplicationName":"Pyc"}}
+{"Timestamp":"2022-09-18T09:45:15.9073363+00:00","Level":"Information","MessageTemplate":"Application is starting.","Properties":{"MachineName":"537baaf0ecfa","ProcessId":240,"ThreadId":1,"ApplicationName":"Pyc"}}

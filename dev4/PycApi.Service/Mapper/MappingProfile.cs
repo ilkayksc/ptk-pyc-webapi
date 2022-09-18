@@ -15,6 +15,10 @@ namespace PycApi.Mapper
             CreateMap<AccountDto, Account>().ReverseMap();
 
             CreateMap<CardDto, Card>().ReverseMap();
+
+            CreateMap<Person, PersonDto>().ReverseMap();
+
+            CreateMap<PersonInfo, PersonInfoDto>().ReverseMap();
         }
 
     }

@@ -8,6 +8,7 @@ namespace PycApi.Data
     {
         public CardMap()
         {
+            
             Id(x => x.Id, x =>
             {
                 x.Type(NHibernateUtil.Int32);

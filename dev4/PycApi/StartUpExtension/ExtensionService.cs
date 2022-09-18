@@ -32,6 +32,7 @@ namespace PycApi.StartUpExtension
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<ICardService, CardService>();
+            services.AddScoped<IPersonService, PersonService>();
 
 
             // mapper

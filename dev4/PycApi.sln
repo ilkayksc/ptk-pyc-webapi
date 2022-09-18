@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMq.Producer", "Rabbit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMq.Consumer", "RabbitMq.Consumer\RabbitMq.Consumer.csproj", "{A863D573-6BCA-4FDC-B332-E2C80D750CF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PycApi.TestX", "PycApi.TestX\PycApi.TestX.csproj", "{14108A11-BE92-4571-8E52-118607D8C7A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PycApi.TestN", "PycApi.TestN\PycApi.TestN.csproj", "{31A8B721-6415-4A29-973C-E6AB9BAE09BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{A863D573-6BCA-4FDC-B332-E2C80D750CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A863D573-6BCA-4FDC-B332-E2C80D750CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A863D573-6BCA-4FDC-B332-E2C80D750CF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14108A11-BE92-4571-8E52-118607D8C7A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14108A11-BE92-4571-8E52-118607D8C7A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14108A11-BE92-4571-8E52-118607D8C7A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14108A11-BE92-4571-8E52-118607D8C7A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31A8B721-6415-4A29-973C-E6AB9BAE09BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A8B721-6415-4A29-973C-E6AB9BAE09BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31A8B721-6415-4A29-973C-E6AB9BAE09BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31A8B721-6415-4A29-973C-E6AB9BAE09BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
